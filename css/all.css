@@ -109,7 +109,9 @@ body {
   position: fixed;
   top: 0;
   background-color: #fff;
-  border-bottom: 2px solid #ADB5BD;
+  opacity: 0.9;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   z-index: 5;
 }
 

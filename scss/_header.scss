@@ -14,7 +14,9 @@ body{
         position: fixed;
         top: 0;
         background-color: #fff;
-        border-bottom: 2px solid #ADB5BD;
+        opacity: 0.9;
+        backdrop-filter: blur(12px); //毛玻璃效果，背景霧化
+        // border-bottom: 2px solid #ADB5BD;
         z-index: 5;
     }
 }

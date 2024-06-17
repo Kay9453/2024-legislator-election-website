@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立委競選官網 | 喵立翰</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/all.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 區塊：header -->
+        <div class="header-bg">
+            <div class="header container">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html" target="_blank"></a>
+                    </h1>
+                </div>
+                <div class="nav-btn">
+                    <img class="menu-icon" src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fmenu-blue.svg?alt=media&token=ecdbb318-7fe9-4456-a169-4f7f0eb761a5" alt="">
+                    <img class="close-icon" src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fclose-blue.svg?alt=media&token=1f7b9a74-2f1f-4567-8e01-d9d91ade9a6d" alt="">
+                </div>
+                <ul class="nav">
+                    <li><a href="#news">最新活動</a></li>
+                    <li><a href="#policy">政策議題</a></li>
+                    <li><a href="#donate">小額捐款</a></li>
+                </ul>
+                <ul class="nav-social-list">
+                    <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Ffb-blue.svg?alt=media&token=397b740f-9cc1-42d5-b977-19f40247d491" alt="Facebook 粉絲團"></a></li>
+                    <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fig-blue.svg?alt=media&token=3b074134-f8ee-48ec-973c-9dc2a4f4baf3" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fyoutube-blue.svg?alt=media&token=294fb63f-c921-4c3b-acab-36a6a86abeda" alt="Youtube 官方頻道"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 為了做 Header 下層灰階，所以多包一層 -->
+        <div class="main">
+            <div class="gray-layer"></div>
+            <!-- 區塊：Banner -->
+            <div class="banner-bg">
+                <div class="banner container">
+                    <div class="slogan">
+                        <h2>喵的未來<br>
+                            人的希望</h2>
+                        <div class="people-name-sec">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fcat-footprint-white%201.png?alt=media&token=55928912-faff-408d-ad21-96a0420efdf1" alt="">
+                            <div class="people-name">
+                                <h3 class="cht-name">喵立翰</h3>
+                                <h3 class="en-name">Miao Li-Han</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portrait">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2FPeople.png?alt=media&token=3e6ffbc0-00e3-41af-9429-9dd9309fa66e" alt="立委候選人喵立翰">
+                    </div>
+                </div>
+            </div>
+            <!-- 區塊：候選人主張 -->
+            <div class="proposal-bg">
+                <div class="proposal container">
+                    <div class="proposal-title">
+                        <h3>立法委員<br>
+                            候選人主張</h3>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Floud-speaker1%201.png?alt=media&token=1e951696-8612-4d3f-8873-e69110a1c64c" alt="">
+                    </div>
+                    <div class="slogan-sec">
+                        <h2>喵立翰（Miao Li-Han）</h2>
+                        <p>我堅信，藉由推動更完善的貓咪福利和相關政策，更是間接地投資於台灣的未來。畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的 GDP 經濟帶來巨大效益。<br>
+                        因此，我期望能在立法院內推進這些政策，確保每一隻貓咪都能得到他們應有的照顧，同時也為台灣的經濟發展助一臂之力。讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 區塊：最新活動 -->
+            <div class="news-bg" id="news">
+                <div class="news container">
+                    <div class="title">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Ftitle-footprint-big.png?alt=media&token=944d1a49-9b7b-4bb1-a51e-493afe415453" alt="">
+                        <h3>最新活動</h3>
+                    </div>
+                    <ul class="news-list">
+                        <li>
+                            <div class="news-item">
+                                <span>2023/12/26</span>
+                                <h4>參與台北寵物論壇，爭取貓咪友善環境</h4>
+                                <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fnews-pic1.png?alt=media&token=85a3298b-c7e5-4325-837d-9bcc3323b1be" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news-item">
+                                <span>2023/12/24</span>
+                                <h4>掃街模式開啟！帶著你的貓耳，來和我一起走！</h4>
+                                <p>街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。</p>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fnews-pic2.png?alt=media&token=1a2527a3-e61d-4cae-b8e6-92e560f8d3ef" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news-item">
+                                <span>2023/12/20</span>
+                                <h4>收容所模特兒大比拼！</h4>
+                                <p>今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fnews-pic3.png?alt=media&token=cec37711-921f-436d-9ccb-11aeb67764ca" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 區塊：政策議題 -->
+            <div class="policy-bg" id="policy">
+                <div class="policy container">
+                    <div class="title">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Ftitle-footprint-big.png?alt=media&token=944d1a49-9b7b-4bb1-a51e-493afe415453" alt="">
+                        <h3>政策議題</h3>
+                    </div>
+                    <ul class="policy-list">
+                        <li class="policy-item">
+                            <div class="policy-content">
+                                <h4>政策一：為毛孩子謀福利！推動寵物醫療保障方案</h4>
+                                <ol class="shownumber">
+                                    <li>設立寵物醫療基金：每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用</li>
+                                    <li>提供醫療補助：每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力</li>
+                                    <li>合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論</li>
+                                </ol>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fpolicy-pic1.svg?alt=media&token=00f70947-ff31-46ce-9848-165ff355232d" alt="">
+                        </li>
+                        <li class="policy-item policy-2">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fpolicy-pic2.svg?alt=media&token=48d568a2-b683-47d4-9d9e-a4c93875755c" alt="">
+                            <div class="policy-content">
+                                <h4>政策二：打造休閒天堂！推廣寵物休閒與娛樂場所</h4>
+                                <ol class="shownumber">
+                                    <li>建立寵物公園：每年撥款新台幣 5 億元，用於在各大都市建立專屬的寵物公園。根據初步規劃，預計在第一年內，將在全國範圍內建立至少 10 座寵物公園</li>
+                                    <li>推廣寵物友善商家：鼓勵商家提供寵物友善的環境，並為參與的商家提供稅收優惠。預計在政策實施後的首年，將有超過 500 家商家加入此計畫</li>
+                                    <li>舉辦寵物活動和工作坊：與各大寵物社團和組織合作，每年舉辦至少 5 場大型的寵物活動，包括寵物才藝比賽、飼養知識工作坊等</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="policy-item">
+                            <div class="policy-content">
+                                <h4>政策三：推廣寵物飼養教育，讓愛更加專業</h4>
+                                <ol class="shownumber">
+                                    <li>建立寵物飼養教育中心：每年撥款新台幣 3 億元，用於在全國各地建立專業的寵物飼養教育中心。預計在第一年內，在全國至少 5 大城市設立教育中心</li>
+                                    <li>推廣寵物飼養課程：與學校、社區組織和寵物社團合作，推出一系列免費的寵物飼養課程。預計每年將有超過 10,000 名市民受益</li>
+                                    <li>製作教育資料：出版寵物飼養手冊、影片和線上課程，讓所有有意飼養寵物的家庭都能輕鬆取得正確的知識</li>
+                                </ol>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fpolicy-pic3.svg?alt=media&token=3268d300-1e49-4c18-a3f9-193fc5ae98f3" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 區塊：捐款 -->
+            <div class="donate-bg" id="donate">
+                <div class="donate container">
+                    <h3 class="donate-maintitle">您的小筆捐款，是每隻毛孩未來的大大動力！</h3>
+                    <p class="donate-subtitle">目前小額贊助總金額：987,655,873</p>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fdonate-pic.png?alt=media&token=801df58b-d2eb-4bed-8c25-e8d245cd8f47" alt="">
+                    <ul class="donate-list">
+                        <li class="donate-item">
+                            <h4 class="plan-title">喵星人之友</h4>
+                            <p class="donate-price">捐款新台幣 <span class="price">600</span> 元</p>
+                            <p>已有 9957 人贊助</p>
+                            <a class="donate-btn" href="#" target="_blank">我要贊助</a>
+                        </li>
+                        <li class="donate-item">
+                            <h4 class="plan-title">喵星大使</h4>
+                            <p class="donate-price">捐款新台幣 <span class="price">6,000</span> 元</p>
+                            <p>已有 2000 人贊助</p>
+                            <a class="donate-btn" href="#" target="_blank">我要贊助</a>
+                        </li>
+                        <li class="donate-item">
+                            <h4 class="plan-title">喵星傳奇</h4>
+                            <p class="donate-price">捐款新台幣 <span class="price">60,000</span> 元</p>
+                            <p>已有 999 人贊助</p>
+                            <a class="donate-btn" href="#" target="_blank">我要贊助</a>
+                        </li>
+                        <li class="donate-item">
+                            <h4 class="plan-title">自訂贊助金額</h4>
+                            <div class="donate-price">
+                                <form action="">
+                                    <span>NT$</span>
+                                    <input type="number" placeholder="請輸入">
+                                </form>
+                            </div>
+                            <a class="donate-btn" href="#" target="_blank">我要贊助</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 區塊：民眾服務信箱 -->
+            <div class="feedback-bg">
+                <div class="feedback container">
+                    <div class="title">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Ftitle-footprint-big.png?alt=media&token=944d1a49-9b7b-4bb1-a51e-493afe415453" alt="">
+                        <h3>民眾服務信箱</h3>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-slogan">
+                            <h2>您的聲音，我們的行動！</h2>
+                            <p>親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。<br>
+                                無論大小事，我都誠摯希望聽到您的建議。<br>
+                                分享您的想法，一同為我們的未來打造更美好！</p>
+                        </div>
+                        <form class="feedback-report" action="#">
+                            <div class="feedback-item">
+                                <label for="rname">您的姓名<span class="required-mark">*</span></label>
+                                <input type="text" id="rname" name="rname" placeholder="請輸入真實姓名">
+                            </div>
+                            <div class="feedback-item">
+                                <label for="mail">您的E-mail<span class="required-mark">*</span></label>
+                                <input type="email" id="mail" name="mail" placeholder="XXX@example.com">
+                            </div>
+                            <div class="feedback-item">
+                                <label for="phone">您的手機<span class="required-mark">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="09XXXXXXXX">
+                            </div>
+                            <div class="feedback-item">
+                                <label for="">您的建言<span class="required-mark">*</span></label>
+                                <textarea name="" id=""></textarea>
+                            </div>
+                            <div class="feedback-item">
+                                <input type="submit" value="送出意見">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 區塊：Footer -->
+            <div class="footer-bg">
+                <div class="footer container">
+                    <div class="footer-content">
+                        <div class="footer-contact-sec">
+                            <h3 class="footer-title">聯絡資訊</h3>
+                            <ul class="contact-list">
+                                <li>辦公室地址：喵星區，毛茸茸大道88號，喵喵大樓3樓</li>
+                                <li>電話：<a href="tel:+886028885678">(02) 888-5678</a></li>
+                                <li>電子郵件地址：<a href="mailto:meowoffice@linmeow.tw">meowoffice@linmeow.tw</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-social-sec">
+                            <h3 class="footer-title">追蹤動態</h3>
+                            <ul class="footer-social-list">
+                                <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Ffb-gray.svg?alt=media&token=06193e6d-f563-4900-9dc8-c3d31fdbe765" alt=""></a></li>
+                                <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fig-gray.svg?alt=media&token=147a7344-7855-4395-af4d-f3020f5ddcb5" alt=""></a></li>
+                                <li><a href="#" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fyoutube-gray.svg?alt=media&token=ee835fb3-2a87-44f2-bb97-d8a598fc1f39" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="copyright">© 2024 [Kay Liao] 版權所有。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- © 2024 [Kay Liao] 版權所有。 -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+// 自己設定的 css reset
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* 全域 border box */
+*,*::before,*::after{
+    box-sizing: border-box;
+  }
+
+/* rwd img css */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
+    color: $font-primary;
+    scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: $font-primary;
+}
+
+.wrap{
+	margin: 0 auto;
+}
+
+.container{
+	max-width: 1296px;
+	margin: 0 auto;
+  // background-color: aqua;
+}
+
+/* iPad 版 */
+@media (max-width:992px) {
+  .container{
+      padding-left: 24px;
+      padding-right: 24px;
+  }
+}

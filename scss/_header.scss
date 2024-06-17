@@ -1,0 +1,149 @@
+// header scss
+
+body{
+    padding-top: 72px;
+}
+
+.header-bg{
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 72px;
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        border-bottom: 2px solid #ADB5BD;
+        z-index: 5;
+    }
+}
+
+.logo{
+    h1{
+        a{
+            /* 為了 SEO 搜尋，改用圖片取代文字寫法，參考此篇 https://ithelp.ithome.com.tw/m/articles/10215276 */
+
+            /* 載入 LOGO 圖片 */
+            background-image:url(https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Flogo.svg?alt=media&token=67f8b43b-be22-4deb-8be1-a8f2701fbd96);
+            width: 124px;
+            height: 40px;
+            
+            /* 文字縮排，縮排 101% 等於完全縮到原來的寬度之外 */
+            text-indent: 101%;
+            
+            /* overflow 當原素滿出他原來的框框時要做什麼動作，選擇 hidden 隱藏他，這是看不到文字的主因 */
+            overflow:hidden;
+            
+            /* white-space 決定如何處理空白字元，因為就算是空白字元，也還是算佔空間，若超出空間可能會啟動捲軸，所以我們設定為nowrap，就不會有卷軸產生 */
+            white-space: nowrap;
+            
+            /* 浮起來靠左排 */
+            float:left; 
+        }
+    }
+}
+
+.nav{
+    display: flex;
+    gap: 24px;
+    li{
+        a{
+            font-size: 24px;
+            padding: 10px 24px;
+            border-bottom: 4px solid transparent;
+            &:hover{
+                border-bottom: 4px solid #FBBB6E;
+            }
+        }
+    }
+}
+
+/*  header 社群按鈕 */
+.nav-social-list{
+    display: flex;
+    gap: 24px;
+}
+
+//手機版 nav-Btn 在 PC 預設隱藏
+.nav-btn {
+    display: none;
+}
+
+// .gray-layer{
+//     display: none;
+// }
+
+@media (max-width: 992px) {
+
+    // 社群按鈕隱藏
+    .nav-social-list{
+        display: none;
+    }
+    .header-bg{
+        position: relative;
+    }
+    .nav-btn{
+        display: block;
+        img{
+            // 效果沒出來???
+            transition: all 0.6s;
+            cursor: pointer;
+        }
+    }
+    .nav-hide{
+        display: none;
+    }
+
+    .nav-show{
+        position: absolute;
+        top: 72px;
+        left: 0;
+        z-index: 2;
+        background-color: #fff;
+        padding-top: 16px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        li{
+            width: 100%;
+            a{
+                display: block;
+                padding: 16px 24px;
+                border-bottom: 0;
+                &:hover{
+                    border-bottom: 0;
+                    background-color: #FBBB6E;
+                }
+            }
+        }
+    }
+    // nav-btn 隱藏效果
+    .icon-hide{
+        display: none;
+    }
+    
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+/* iPad 版 */
+// @media (max-width:992px) {
+
+// }
+
+
+// /* 手機版 */
+// @media (max-width:767px) {
+    
+// }

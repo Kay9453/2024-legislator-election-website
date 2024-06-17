@@ -1,0 +1,911 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 全域 border box */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* rwd img css */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+  color: #424242;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #424242;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+/* iPad 版 */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+body {
+  padding-top: 72px;
+}
+
+.header-bg .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 2px solid #ADB5BD;
+  z-index: 5;
+}
+
+.logo h1 a {
+  /* 為了 SEO 搜尋，改用圖片取代文字寫法，參考此篇 https://ithelp.ithome.com.tw/m/articles/10215276 */
+  /* 載入 LOGO 圖片 */
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Flogo.svg?alt=media&token=67f8b43b-be22-4deb-8be1-a8f2701fbd96);
+  width: 124px;
+  height: 40px;
+  /* 文字縮排，縮排 101% 等於完全縮到原來的寬度之外 */
+  text-indent: 101%;
+  /* overflow 當原素滿出他原來的框框時要做什麼動作，選擇 hidden 隱藏他，這是看不到文字的主因 */
+  overflow: hidden;
+  /* white-space 決定如何處理空白字元，因為就算是空白字元，也還是算佔空間，若超出空間可能會啟動捲軸，所以我們設定為nowrap，就不會有卷軸產生 */
+  white-space: nowrap;
+  /* 浮起來靠左排 */
+  float: left;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+.nav li a {
+  font-size: 24px;
+  padding: 10px 24px;
+  border-bottom: 4px solid transparent;
+}
+.nav li a:hover {
+  border-bottom: 4px solid #FBBB6E;
+}
+
+/*  header 社群按鈕 */
+.nav-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .nav-social-list {
+    display: none;
+  }
+  .header-bg {
+    position: relative;
+  }
+  .nav-btn {
+    display: block;
+  }
+  .nav-btn img {
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+  .nav-hide {
+    display: none;
+  }
+  .nav-show {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 16px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-show li {
+    width: 100%;
+  }
+  .nav-show li a {
+    display: block;
+    padding: 16px 24px;
+    border-bottom: 0;
+  }
+  .nav-show li a:hover {
+    border-bottom: 0;
+    background-color: #FBBB6E;
+  }
+  .icon-hide {
+    display: none;
+  }
+}
+/* iPad 版 */
+.footer-title {
+  color: #004064;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 64px;
+  padding-bottom: 12px;
+}
+
+.footer-bg {
+  background-color: #ECF8FF;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.footer-bg::before {
+  position: absolute;
+  content: url("../images/bg-cat-footprint.png");
+  top: -256px;
+  right: -256px;
+  z-index: -2;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 140px;
+}
+.footer-content .contact-list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.footer-content .footer-social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 66px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    gap: 84px;
+  }
+  .footer-content .footer-social-list {
+    gap: 16px;
+  }
+  .copyright {
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 20px;
+    padding-top: 32px;
+    padding-bottom: 12px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .copyright {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.gray-layer {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .main {
+    position: relative;
+  }
+  .main .gray-layer {
+    display: block;
+  }
+  .layer-show {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.54);
+    z-index: 1;
+  }
+}
+/* 區塊：Banner */
+.banner-bg {
+  background: linear-gradient(90deg, #004064 20.39%, #0080C7 90.19%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 48px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+.banner .portrait {
+  max-width: 48%;
+}
+.banner .slogan {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 102px;
+  text-wrap: nowrap;
+}
+.banner .slogan h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.people-name-sec {
+  display: flex;
+  gap: 28px;
+}
+.people-name-sec img {
+  width: 60px;
+}
+.people-name-sec .people-name {
+  font-weight: 700;
+}
+.people-name-sec .people-name .cht-name {
+  font-size: 48px;
+}
+.people-name-sec .people-name .en-name {
+  font-size: 32px;
+}
+
+@media (max-width: 992px) {
+  .banner-bg {
+    padding-top: 40px;
+  }
+  .banner {
+    gap: 36px;
+  }
+  .banner .slogan {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .banner .slogan h2 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .people-name-sec {
+    display: flex;
+    gap: 20px;
+  }
+  .people-name-sec img {
+    width: 44px;
+  }
+  .people-name-sec .people-name .cht-name {
+    font-size: 36px;
+  }
+  .people-name-sec .people-name .en-name {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-bg {
+    padding-top: 16px;
+  }
+  .banner {
+    gap: 16px;
+  }
+  .banner .portrait {
+    max-width: 48%;
+  }
+  .banner .slogan {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .banner .slogan h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .people-name-sec {
+    display: flex;
+    gap: 12px;
+  }
+  .people-name-sec img {
+    width: 32px;
+  }
+  .people-name-sec .people-name {
+    font-weight: 700;
+  }
+  .people-name-sec .people-name .cht-name {
+    font-size: 24px;
+  }
+  .people-name-sec .people-name .en-name {
+    font-size: 16px;
+  }
+}
+/*區塊：候選人主張*/
+.proposal {
+  padding-top: 64px;
+  padding-bottom: 47px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+.proposal .proposal-title {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+.proposal .proposal-title h3 {
+  text-align: right;
+  font-size: 36px;
+  font-weight: 700;
+}
+.proposal .slogan-sec {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  gap: 24px;
+  border-left: 4px solid #424242;
+}
+.proposal .slogan-sec h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .proposal {
+    padding-top: 52px;
+    padding-bottom: 26px;
+    gap: 20px;
+  }
+  .proposal .proposal-title h3 {
+    font-size: 24px;
+  }
+  .proposal .slogan-sec {
+    padding-left: 12px;
+  }
+  .proposal .slogan-sec h2 {
+    font-size: 24px;
+  }
+}
+.title {
+  display: flex;
+  gap: 10px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.title h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #004064;
+}
+
+@media (max-width: 992px) {
+  .title {
+    padding-top: 52px;
+    padding-bottom: 60px;
+  }
+  .title h3 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .title h3 {
+    font-size: 24px;
+  }
+}
+/* 區塊：最新活動 */
+.news-bg {
+  background-color: #ECF8FF;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+.news-bg::before {
+  position: absolute;
+  content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fbg-cat-footprint.png?alt=media&token=3a213f98-613a-4323-84dd-cfeacb825feb");
+  top: 0;
+  right: -256px;
+}
+.news-bg::after {
+  position: absolute;
+  content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fbg-cat-footprint.png?alt=media&token=3a213f98-613a-4323-84dd-cfeacb825feb");
+  bottom: 500px;
+  left: -256px;
+  z-index: 0;
+}
+
+.news {
+  position: relative;
+  z-index: 5;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 14px;
+}
+.news-list li {
+  position: relative;
+  border-left: 4px solid #006BA6;
+}
+.news-list li .news-item {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 68px;
+}
+.news-list li .news-item span {
+  font-weight: 700;
+  background-color: #006BA6;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.news-list li .news-item h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #006BA6;
+}
+.news-list li .news-item img {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.news-list li::before {
+  position: absolute;
+  content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fcat-face-blue%201.png?alt=media&token=04a04c26-7313-4f12-a679-c31b5d178bcf");
+  top: -8px;
+  left: -18px;
+}
+.news-list li::after {
+  position: absolute;
+  content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fcat-face-blue%201.png?alt=media&token=04a04c26-7313-4f12-a679-c31b5d178bcf");
+  bottom: -9px;
+  left: -18px;
+}
+
+@media (max-width: 992px) {
+  .news-bg {
+    padding-bottom: 44px;
+  }
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .news-list li .news-item {
+    margin-left: 46px;
+  }
+  .news-list li::before {
+    position: absolute;
+    content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fcat-face-blue%201.png?alt=media&token=04a04c26-7313-4f12-a679-c31b5d178bcf");
+    top: -8px;
+    left: -18px;
+  }
+  .news-list li::after {
+    position: absolute;
+    content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fcat-face-blue%201.png?alt=media&token=04a04c26-7313-4f12-a679-c31b5d178bcf");
+    bottom: -9px;
+    left: -18px;
+  }
+}
+@media (max-width: 767px) {
+  .news-bg {
+    padding-bottom: 44px;
+  }
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .news-list li .news-item {
+    padding: 24px 20px;
+    margin-left: 42px;
+  }
+  .news-list li .news-item span {
+    font-size: 14px;
+  }
+  .news-list li .news-item h4 {
+    font-size: 20px;
+  }
+}
+/* 區塊：政策議題 */
+.policy-bg {
+  padding-bottom: 65px;
+}
+.policy-bg .policy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+.policy-bg .policy-list .policy-item {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.policy-content h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.policy-content .shownumber {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+@media (max-width: 992px) {
+  .policy-bg {
+    padding-bottom: 48px;
+  }
+  .policy-bg .policy-list {
+    gap: 72px;
+  }
+}
+@media (max-width: 767px) {
+  .policy-bg {
+    padding-bottom: 32px;
+  }
+  .policy-bg .policy-list {
+    gap: 64px;
+  }
+  .policy-bg .policy-list .policy-item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .policy-bg .policy-list .policy-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+/* 區塊：捐款 */
+.donate-bg {
+  background-color: #ECF8FF;
+  padding-top: 84px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.donate-bg::before {
+  position: absolute;
+  content: url("https://firebasestorage.googleapis.com/v0/b/kayismeblog.appspot.com/o/2024-legislator-election-website%2Fbg-cat-footprint.png?alt=media&token=3a213f98-613a-4323-84dd-cfeacb825feb");
+  top: 0;
+  right: -256px;
+  z-index: -2;
+}
+
+.donate {
+  position: relative;
+  z-index: 10;
+}
+.donate .donate-maintitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #004064;
+  text-align: center;
+}
+.donate .donate-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 44px;
+  margin-bottom: 18px;
+}
+.donate img {
+  margin: 0 auto;
+}
+.donate .donate-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 54px;
+  margin-top: 48px;
+}
+
+.donate-item {
+  width: 25%;
+  padding: 16px 24px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.donate-item .plan-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #004064;
+}
+.donate-item .price {
+  color: #E5446D;
+  font-size: 24px;
+  font-weight: 700;
+}
+.donate-item .donate-price {
+  padding-top: 16px;
+  border-top: 2px solid #424242;
+}
+.donate-item .donate-btn {
+  font-weight: 700;
+  color: #E5446D;
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: 2px solid #E5446D;
+}
+.donate-item .donate-btn:hover {
+  color: #fff;
+  background-color: #E5446D;
+}
+.donate-item form {
+  width: 100%;
+}
+.donate-item form input {
+  padding: 12px 16px;
+  border: 2px solid #ADB5BD;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.donate-item form input[type=number]:focus {
+  border: 2px solid #004064;
+  box-shadow: 0px 0px 0px 4px rgba(0, 64, 100, 0.2);
+}
+.donate-item form input[type=number]::-moz-placeholder {
+  color: #CED4DA;
+}
+.donate-item form input[type=number]::placeholder {
+  color: #CED4DA;
+}
+
+@media (max-width: 992px) {
+  .donate-bg {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  .donate .donate-maintitle {
+    font-size: 36px;
+  }
+  .donate .donate-subtitle {
+    margin-bottom: 16px;
+  }
+  .donate .donate-list {
+    margin-top: 40px;
+  }
+  .donate-item {
+    width: 47%;
+  }
+}
+@media (max-width: 767px) {
+  .donate-bg {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .donate .donate-maintitle {
+    font-size: 24px;
+  }
+  .donate .donate-subtitle {
+    font-size: 16px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+  .donate .donate-list {
+    gap: 32px;
+    margin-top: 8px;
+  }
+  .donate-item {
+    width: 100%;
+  }
+  .donate-item .plan-title {
+    font-size: 20px;
+  }
+  .donate-item .price {
+    font-size: 20px;
+  }
+  .donate-item .donate-price {
+    font-size: 14px;
+  }
+}
+/* 區塊：民眾服務信箱 */
+.feedback-bg {
+  padding-bottom: 64px;
+}
+
+.feedback .feedback-content {
+  padding-left: 112px;
+}
+.feedback .feedback-content .feedback-slogan h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #004064;
+}
+.feedback .feedback-content .feedback-slogan p {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 42px;
+}
+.feedback .feedback-content .feedback-report {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.feedback-item label {
+  font-weight: 700;
+}
+.feedback-item label .required-mark {
+  color: #DC3545;
+}
+.feedback-item input, .feedback-item textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 2px solid #ADB5BD;
+}
+.feedback-item input[type=text]:focus, .feedback-item input[type=email]:focus, .feedback-item input[type=tel]:focus, .feedback-item textarea:focus {
+  border: 2px solid #004064;
+  box-shadow: 0px 0px 0px 4px rgba(0, 64, 100, 0.2);
+}
+.feedback-item input[type=text]::-moz-placeholder, .feedback-item input[type=email]::-moz-placeholder, .feedback-item input[type=tel]::-moz-placeholder, .feedback-item textarea::-moz-placeholder {
+  color: #CED4DA;
+}
+.feedback-item input[type=text]::placeholder, .feedback-item input[type=email]::placeholder, .feedback-item input[type=tel]::placeholder, .feedback-item textarea::placeholder {
+  color: #CED4DA;
+}
+.feedback-item input[type=submit] {
+  font-weight: 700;
+  color: #004064;
+  padding: 12px 24px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 2px solid #004064;
+}
+.feedback-item input[type=submit]:hover {
+  background-color: #004064;
+  color: #fff;
+}
+.feedback-item textarea {
+  height: 92px;
+}
+
+@media (max-width: 992px) {
+  .feedback-bg {
+    padding-bottom: 36px;
+  }
+  .feedback .feedback-content {
+    padding-left: 62px;
+  }
+  .feedback .feedback-content .feedback-slogan h2 {
+    font-size: 36px;
+  }
+  .feedback .feedback-content .feedback-slogan p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .feedback-bg {
+    padding-bottom: 40px;
+  }
+  .feedback .feedback-content {
+    padding-left: 0;
+  }
+  .feedback .feedback-content .feedback-slogan h2 {
+    font-size: 24px;
+  }
+  .feedback .feedback-content .feedback-slogan p {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .feedback-item input, .feedback-item textarea {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=all.css.map */
